@@ -10,7 +10,7 @@ func SetAccountIdCookie(response http.ResponseWriter, account_id string) {
 	cookie := http.Cookie{
 		Name:    "account_id",
 		Value:   account_id,
-		Expires: time.Now().Add(10 * time.Minute), //Zet de expiration date van de cookie op 3 minuten
+		Expires: time.Now().Add(3 * time.Minute), //Zet de expiration date van de cookie op 3 minuten
 	}
 
 	http.SetCookie(response, &cookie)
