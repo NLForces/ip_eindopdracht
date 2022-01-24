@@ -3,12 +3,13 @@ package handlers
 import (
 	"html/template"
 	"log"
+	"main/helpers"
 	"net/http"
 )
 
 func LogoutHandler(response http.ResponseWriter, request *http.Request) {
 	log.Println("Logged out")
-	http.SetCookie(response, nil)
+	helpers.SetAccountIdCookie(response, "0")
 
 	render, err := template.ParseFiles("templates/logout.html")
 
