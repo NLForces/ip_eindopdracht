@@ -2,7 +2,11 @@
 
     <body>
         
-        <h1>Import transactions</h1>
+        <h1>Import transactions</h1>        
+
+        <a href="/templates/show-welcome.html">
+            <button>Terug</button>
+         </a>
 
         {{ if .Errors }}
             <p>Errors:</p>
@@ -23,10 +27,6 @@
             <input type="submit" value="Import">
 
         </form>
-        
-        <a href="/show-welcome.html">
-            <button>Terug</button>
-         </a>
 
     </body>
 
