@@ -49,21 +49,3 @@ func handlePost(response http.ResponseWriter, request *http.Request, data *struc
 		data.Errors = append(data.Errors, "Onjuiste pincode")
 	}
 }
-
-// func CreateWithdrawalPostHandler(response http.ResponseWriter, request *http.Request, data *struct{ Errors []string }) {
-// 	request.ParseForm()
-
-// 	id := helpers.GetAccountIdCookie(request)
-// 	amount, _ := strconv.ParseFloat(request.FormValue("amount"), 64)
-// 	description := (request.FormValue("description"))
-
-// 	var canwithdraw bool = repositories.CanWithdrawFromAccount(id, amount)
-
-// 	if canwithdraw {
-// 		repositories.CanWithdrawFromAccount(id, amount)
-// 		repositories.WithdrawFromAccount(id, amount, description)
-// 		http.Redirect(response, request, "/withdrawal-confirmed", http.StatusFound)
-// 	} else {
-// 		data.Errors = append(data.Errors, "Onvoldoende balans")
-// 	}
-// }

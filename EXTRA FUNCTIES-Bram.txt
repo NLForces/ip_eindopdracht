@@ -4,8 +4,12 @@
 - Automatisch uitloggen na 10 minuten       (cookies.go en Helpers.go)
 - Pincode functionaliteit                   (handlePost in LoginHandler.go)
 
+- ONLINE HOSTING
+
 TODO:
-ONLINE HOSTING
+Redirect naar login.
+https fixen
+Controleren of bruteforcen werkt
 camelCaSing fixen
 Optimaliseren
 back to login button/reset cookie
@@ -30,4 +34,4 @@ Pullen:
 'Git pull' in de juiste map
 
 Drop tables en add
-'source' path
+'source' /home/pi/gohttp/seeder.sql
