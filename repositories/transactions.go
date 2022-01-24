@@ -43,7 +43,7 @@ func CanWithdrawFromAccount(account_id uint, amount float64) bool {
 	connection().Where("id = ?", account_id).Find(&persoonData)
 
 	saldo := GetSaldoForAccount(account_id)
-	canWithdraw := persoonData.Maxcredit < saldo-amount
+	canWithdraw := persoonData.Maxcredit <= saldo-amount
 
 	return canWithdraw
 }
