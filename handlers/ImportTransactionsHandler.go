@@ -64,11 +64,13 @@ func ImportTransactionsPostHandler(response http.ResponseWriter, request *http.R
 		return
 	}
 
-	
-//Handler die iporttransactions aanroept en het filepath meegeeft van de JSON file. Stuurt je na afloop door naar de /transactions.html
+	//Handler die iporttransactions aanroept en het filepath meegeeft van de JSON file. Stuurt je na afloop door naar de /transactions.html
 	jsonContinue := repositories.ImportTransactions(dst.Name())
-	 	if jsonContinue != nil {
-			 data.Errors = append(data.Errors, "Error met JSON inladen")
-		 }
+	if jsonContinue != nil {
+		data.Errors = append(data.Errors, "Error met JSON inladen")
+	}
+
+	log.Println("Json bestand geïmporteerd")
+
 	http.Redirect(response, request, "/transactions", http.StatusFound)
 }
