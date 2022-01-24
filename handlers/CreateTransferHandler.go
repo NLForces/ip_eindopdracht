@@ -47,9 +47,11 @@ func CreateTransferPostHandler(response http.ResponseWriter, request *http.Reque
 		repositories.CanWithdrawFromAccount(id, amount)
 		repositories.WithdrawFromAccount(id, amount, description)
 		repositories.AddToAccount(target_id, amount, description)
+		log.Println("Geld afgeschreven (van, naar, hoeveelheid, beschrijving): ", id, target_id, amount, description)
 
 		http.Redirect(response, request, "/transfer-confirmed", http.StatusFound)
 	} else {
+		log.Println("Kon geen geld afschrijven")
 		data.Errors = append(data.Errors, "Onvoldoende balans")
 	}
 }
