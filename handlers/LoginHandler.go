@@ -25,7 +25,7 @@ func LoginHandler(response http.ResponseWriter, request *http.Request) {
 		handlePost(response, request, &data)
 	}
 
-	render, err := template.ParseFiles("templates/login.html")
+	render, err := template.ParseFiles("templates/index.html")
 
 	if err != nil {
 		log.Println(err)
