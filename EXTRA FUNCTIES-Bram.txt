@@ -3,21 +3,25 @@
 - Optie om met centen te werken             (Withdrawl en transfer htmls)
 - Automatisch uitloggen na 10 minuten       (cookies.go en Helpers.go)
 - Pincode functionaliteit                   (handlePost in LoginHandler.go)
+- Back to login button (+ reset cookie)     (logouthandler in handlers)
+
 
 - ONLINE HOSTING
     - Automatisch Redirect naar login
     - DDOS protection
     - Github push-pull
 
+- KLEINE TOEVOEGINGEN
+    - Back buttons over de pagina's
+
+
 TODO:
 https fixen <^-- VRAAG AAN DAVID
 Controleren of bruteforcen werkt
 camelCaSing fixen
 Optimaliseren
-back to login button/reset cookie
-Extra HTML buttons
 Encrypt pincode (hash)
-Losse logout pagina
+Create user
 
 Uren eraan gewerkt:
 dinsdag 18   -  8:45 - 16:30 = 7u 45
