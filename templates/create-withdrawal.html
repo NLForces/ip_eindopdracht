@@ -1,0 +1,30 @@
+<html>
+
+    <body>
+        
+        <h1>Create withdrawal</h1>
+
+        {{ if .Errors }}
+            <p>Errors:</p>
+            <ul>
+                {{ range .Errors }}
+                    <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        {{ end }}
+        
+        <form action="/withdrawal" method="POST">
+
+            <label for="amount">Amount:</label><br>
+            <input type="number" name="amount" min="0" max="100" step="0.1"><br> 
+            
+            <br>
+            
+            <input type="submit" value="Withdraw">
+
+        </form>
+        
+
+    </body>
+
+</html>

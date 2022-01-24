@@ -1,0 +1,40 @@
+<html>
+
+    <body>
+        
+        <h1>Transfer</h1>
+
+        {{ if .Errors }}
+            <p>Errors:</p>
+            <ul>
+                {{ range .Errors }}
+                    <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        {{ end }}
+
+        <form action="/transfer" method="POST">
+
+            <label for="target_account_id">For (account id):</label><br>
+            <input type="number" name="target_account_id"><br>
+
+            <br>
+
+            <label for="amount">Amount:</label><br>
+            <input type="number" name="amount" min="0" max="100" step="0.1"><br>
+            
+            <br>
+
+            <label for="amount">Description:</label><br>
+            <textarea name="description"></textarea><br>
+            
+            <br>
+
+            <input type="submit" value="Transfer">
+
+        </form>
+        
+
+    </body>
+
+</html>

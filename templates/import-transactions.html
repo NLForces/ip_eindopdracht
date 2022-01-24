@@ -1,0 +1,30 @@
+<html>
+
+    <body>
+        
+        <h1>Import transactions</h1>
+
+        {{ if .Errors }}
+            <p>Errors:</p>
+            <ul>
+                {{ range .Errors }}
+                    <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        {{ end }}
+
+        <form action="/import-transactions" method="POST" enctype="multipart/form-data">
+
+            <label for="file">JSON file</label><br>
+            <input type="file" name="file" accept=".json"><br>
+            
+            <br>
+
+            <input type="submit" value="Import">
+
+        </form>
+        
+
+    </body>
+
+</html>
