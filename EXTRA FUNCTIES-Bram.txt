@@ -23,5 +23,11 @@ zaterdag 22  - 20:30 - 22:15 = 1u 30m
 
 
 Gegevens online hosting:
-sudo mysql -u root -p
+sudo mysql -u dbuser -p
 6820
+
+Pullen: 
+'Git pull' in de juiste map
+
+Drop tables en add
+'source' path
