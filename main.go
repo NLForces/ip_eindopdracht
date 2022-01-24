@@ -10,6 +10,11 @@ import (
 	"github.com/joho/godotenv"
 )
 
+func redirect(w http.ResponseWriter, r *http.Request) {
+
+	http.Redirect(w, r, "http://ip-eindopdracht-bram.nl/login", 301)
+}
+
 func main() {
 	log.Println("Starting application")
 
@@ -23,6 +28,7 @@ func main() {
 	if repositories.Connected() {
 		log.Println("Starting database connection")
 	}
+	http.HandleFunc("/", redirect)
 
 	http.HandleFunc("/welcome", handlers.ShowWelcomeHandler)
 
