@@ -17,8 +17,8 @@
 
 TODO=
 Create user
-2fa
 https fixen <^-- VRAAG AAN DAVID
+2fa
 Controleren of bruteforcen werkt
 camelCaSing fixen
 Optimaliseren
