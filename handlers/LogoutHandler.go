@@ -10,7 +10,7 @@ func LogoutHandler(response http.ResponseWriter, request *http.Request) {
 	log.Println("Logged out")
 	http.SetCookie(response, nil)
 
-	render, err := template.ParseFiles("templates/list-transactions.html")
+	render, err := template.ParseFiles("templates/logout.html")
 
 	if err != nil {
 		log.Println(err)
