@@ -16,10 +16,6 @@ func SetAccountIdCookie(response http.ResponseWriter, account_id string) {
 	http.SetCookie(response, &cookie)
 }
 
-func LogOut(response http.ResponseWriter) {
-	http.SetCookie(response, nil)
-}
-
 func GetAccountIdCookie(request *http.Request) uint {
 	var _cookie, err = request.Cookie("account_id")
 
