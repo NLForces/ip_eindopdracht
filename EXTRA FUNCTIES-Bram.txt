@@ -17,6 +17,7 @@ Optimaliseren
 back to login button/reset cookie
 Extra HTML buttons
 Encrypt pincode (hash)
+Logout functie
 
 Uren eraan gewerkt:
 dinsdag 18   -  8:45 - 16:30 = 7u 45
