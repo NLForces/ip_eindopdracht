@@ -3,12 +3,14 @@
         <h1>Account aangemaakt</h1>
 
         <br>
-Naam van het aangemaakte account: {{ data.name}}
+{{range . }}
+Naam van het aangemaakte account: {{ .name}}
 <br>
-Log in met dit account ID: {{ data.account_id}}
-IBAN-nummer: {{ data.code}}
+Log in met dit account ID: {{ .account_id}}
+IBAN-nummer: {{ .code}}
 <br>
-Maximaal rood: {{ data.maxcredit}}
+Maximaal rood: {{ .maxcredit}}
+{{ end }}
 
 <a href="http://ip-eindopdracht-bram.nl/login">
     <button>Terug naar login</button>

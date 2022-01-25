@@ -14,16 +14,16 @@
         {{ end }}
 
     <form action="/create-account" method="POST">
-
+        <br>
         <label for="name">Naam:</label><br>
         <input type="text" name="name"><br> 
-
+        <br>
         <label for="code">IBAN nummer:</label><br>
         <input type="text" name="code" min="1" max="100" step="1"><br> 
-
+        <br>
         <label for="maxcredit">Maximale debet: (bijv: -20)</label><br>
         <input type="number" name="maxcredit" min="-1000" max="-0" step="1"><br> 
-
+        <br>
         <label for="pincode">Pincode:</label><br>
         <input type="number" name="pincode" min="1" max="9999" step="1" maxlength="4"><br> 
         
