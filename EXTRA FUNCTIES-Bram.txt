@@ -2,7 +2,7 @@ EXTRA FUNCTIES TOEGEVOEGD:
 - Opdracht 7 af                             (CanWithDrawFromAccount in transactions repository)
 - Afronden op 2 cijfers achter de komma     (transactions.go repository)
 - Optie om met centen te werken             (Withdrawl en transfer htmls)
-- Automatisch uitloggen na 10 minuten       (cookies.go en Helpers.go)
+- Automatisch uitloggen na 3 minuten        (cookies.go en Helpers.go)
 - Pincode functionaliteit                   (handlePost in LoginHandler.go)
 - Back to login button (+ reset cookie)     (logouthandler in handlers)
 - Create User functionaliteit               (CreateAccountHandler, CreationConfirmedHandler, Accounts.go en main.go)
@@ -19,7 +19,6 @@ EXTRA FUNCTIES TOEGEVOEGD:
 TODO:
 https fixen <^-- VRAAG AAN DAVID
 Controleren of bruteforcen werkt
-camelCaSing fixen
 Optimaliseren
 
 BUGFIXES:

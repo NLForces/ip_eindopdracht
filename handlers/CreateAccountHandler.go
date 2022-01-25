@@ -32,7 +32,7 @@ func CreateAccountHandler(response http.ResponseWriter, request *http.Request) {
 	render.Execute(response, data)
 }
 
-//
+//Gekopiëerd van CreateWithdrawalPostHandler. Vraagt of het account al bestaat (canCreate) en runt vervolgens /creation-confirmed
 func CreateAccountPostHandler(response http.ResponseWriter, request *http.Request, data *struct{ Errors []string }) {
 	request.ParseForm()
 
@@ -41,9 +41,9 @@ func CreateAccountPostHandler(response http.ResponseWriter, request *http.Reques
 	maxcredit, _ := strconv.ParseFloat(request.FormValue("maxcredit"), 64)
 	pincode := (request.FormValue("pincode"))
 
-	var cancreate bool = repositories.CanCreateAccount(name, code)
+	var canCreate bool = repositories.CanCreateAccount(name, code)
 
-	if cancreate {
+	if canCreate {
 		repositories.CreateAccount(name, code, maxcredit, pincode)
 		http.Redirect(response, request, "/creation-confirmed", http.StatusFound)
 		log.Println("Account aangemaakt")

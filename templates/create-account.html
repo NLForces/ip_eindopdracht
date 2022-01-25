@@ -2,8 +2,6 @@
     <body>
         <h1>Account aanmaken</h1>
 
-        <br>
-
         {{ if .Errors }}
             <p>Errors:</p>
             <ul>
@@ -25,7 +23,7 @@
         <input type="number" name="maxcredit" min="-1000" max="-0" step="1"><br> 
         <br>
         <label for="pincode">Pincode:</label><br>
-        <input type="number" name="pincode" min="1" max="9999" step="1" maxlength="4"><br> 
+        <input type="password" name="pincode" min="1" max="9999" maxlength="4"><br> 
         
         <br>
         

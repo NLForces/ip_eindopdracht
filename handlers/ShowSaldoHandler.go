@@ -8,6 +8,7 @@ import (
 	"net/http"
 )
 
+//Functie om het saldo te laten zien. Vraagt welk account is ingelogd, en draait GetSaldoForAccount met dit account ID. De return wordt geparsed naar show-saldo.
 func ShowSaldoHandler(response http.ResponseWriter, request *http.Request) {
 	log.Println("ShowSaldoHandler")
 

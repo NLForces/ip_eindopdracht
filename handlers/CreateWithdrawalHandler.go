@@ -33,7 +33,7 @@ func CreateWithdrawalHandler(response http.ResponseWriter, request *http.Request
 	render.Execute(response, data)
 }
 
-//Functie om te checken of er genoeg geld is om te withdrawen. Als er genoeg is, wordt het gelijk afgeschreven en doorgestuurd.
+//Functie om te checken of er genoeg geld is om te withdrawen (CanWithDrawFromAccount). Als er genoeg is, wordt het gelijk afgeschreven en doorgestuurd (WithdrawFromAccount)
 func CreateWithdrawalPostHandler(response http.ResponseWriter, request *http.Request, data *struct{ Errors []string }) {
 	request.ParseForm()
 

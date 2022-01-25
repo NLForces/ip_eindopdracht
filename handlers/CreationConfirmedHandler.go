@@ -12,9 +12,6 @@ func CreationConfirmedHandler(response http.ResponseWriter, request *http.Reques
 
 	allAccounts := repositories.GetAllAccounts()
 	account_id := allAccounts[len(allAccounts)-1].ID //Roept het ID op van het laatste account en convert dit in een string
-	// name := allAccounts[len(allAccounts)-1].Name
-	// code := allAccounts[len(allAccounts)-1].Code
-	// maxcredit := allAccounts[len(allAccounts)-1].Maxcredit
 
 	data := struct {
 		ID uint

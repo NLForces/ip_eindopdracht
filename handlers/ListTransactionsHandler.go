@@ -8,12 +8,11 @@ import (
 	"net/http"
 )
 
+//Vult transacties variabele met de Transactions struct en het ingelogde account ID.
 func ListTransactionsHandler(response http.ResponseWriter, request *http.Request) {
 	log.Println("ListTransactionsHandler")
 
 	MakeSureLoggedIn(response, request)
-
-	// Eindopdracht 2. Haal hier de lijst van transactions op en geef deze mee aan de template engine
 
 	transacties := repositories.GetTransactionsForAccount(helpers.GetAccountIdCookie(request))
 

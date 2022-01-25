@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+//Zet SetAccountIdCookie naar 0
 func LogoutHandler(response http.ResponseWriter, request *http.Request) {
 	log.Println("Logged out")
 	helpers.SetAccountIdCookie(response, "0")
