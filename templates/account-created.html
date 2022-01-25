@@ -4,12 +4,12 @@
 
         <br>
 {{range . }}
-Naam van het aangemaakte account: {{ .name}}
+<p>Naam van het aangemaakte account: {{ .name}}</p>
 <br>
-Log in met dit account ID: {{ .account_id}}
-IBAN-nummer: {{ .code}}
+<p>Log in met dit account ID: {{ .account_id}}</p>
+<p>IBAN-nummer: {{ .code}}</p>
 <br>
-Maximaal rood: {{ .maxcredit}}
+<p>Maximaal rood: {{ .maxcredit}}</p>
 {{ end }}
 
 <a href="http://ip-eindopdracht-bram.nl/login">
