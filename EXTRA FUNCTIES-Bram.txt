@@ -15,14 +15,15 @@
     - Back buttons over de pagina's
 
 
-TODO=
+TODO:
 Create user
 https fixen <^-- VRAAG AAN DAVID
-2fa
 Controleren of bruteforcen werkt
 camelCaSing fixen
 Optimaliseren
-Encrypt pincode (hash)
+
+BUGFIXES:
+/ redirect niet naar /login
 
 
 Uren eraan gewerkt:
