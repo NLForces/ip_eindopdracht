@@ -14,7 +14,7 @@ EXTRA FUNCTIES TOEGEVOEGD:
 
 - KLEINE TOEVOEGINGEN
     - Back buttons over de pagina's
-
+    - Required forms bij transfer en withdraw
 
 TODO:
 https fixen <^-- VRAAG AAN DAVID
