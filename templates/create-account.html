@@ -1,6 +1,6 @@
 <html>
     <body>
-        <h1>Account aanmaken</h1>
+        <h1>Create account</h1>
 
         {{ if .Errors }}
             <p>Errors:</p>
@@ -13,13 +13,13 @@
 
     <form action="/create-account" method="POST">
         <br>
-        <label for="name">Naam:</label><br>
+        <label for="name">Name:</label><br>
         <input type="text" name="name"><br> 
         <br>
-        <label for="code">IBAN nummer:</label><br>
+        <label for="code">IBAN code:</label><br>
         <input type="text" name="code" min="1" max="100" step="1"><br> 
         <br>
-        <label for="maxcredit">Maximale debet: (bijv: -20)</label><br>
+        <label for="maxcredit">Maximum debet: (Example: -20)</label><br>
         <input type="number" name="maxcredit" min="-1000" max="-0" step="1"><br> 
         <br>
         <label for="pincode">Pincode:</label><br>
@@ -27,7 +27,7 @@
         
         <br>
         
-        <input type="submit" value="Account aanmaken">
+        <input type="submit" value="Create account">
 
     </form>
 </body>
