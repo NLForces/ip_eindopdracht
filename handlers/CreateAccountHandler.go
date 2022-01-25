@@ -38,6 +38,7 @@ func CreateAccountPostHandler(response http.ResponseWriter, request *http.Reques
 	code := "IBAN " + (request.FormValue("code"))
 	maxcredit, _ := strconv.ParseFloat(request.FormValue("maxcredit"), 64)
 	pincode := (request.FormValue("pincode"))
+	log.Println(pincode)
 
 	var cancreate bool = repositories.CanCreateAccount(name, code)
 

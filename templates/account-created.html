@@ -1,13 +1,13 @@
 <html>
     <body>
-        <h1>Account aangemaakt:</h1>
+        <h1>Account aangemaakt</h1>
 
         <br>
-Naam van het aangemaakte account: {{ .name}}
+Naam van het aangemaakte account: {{ data.name}}
 <br>
-Log in met dit account ID: {{ .account_id}}
-IBAN-nummer: {{ .code}}
+Log in met dit account ID: {{ data.account_id}}
+IBAN-nummer: {{ data.code}}
 <br>
-Maximaal rood: {{ .maxcredit}}
+Maximaal rood: {{ data.maxcredit}}
 </body>
 </html>
