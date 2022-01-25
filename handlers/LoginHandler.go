@@ -42,6 +42,6 @@ func handlePost(response http.ResponseWriter, request *http.Request, data *struc
 	if pincodeKlopt {
 		http.Redirect(response, request, "/welcome", http.StatusFound)
 	} else {
-		data.Errors = append(data.Errors, "Onjuiste pincode")
+		data.Errors = append(data.Errors, "Wrong pincode")
 	}
 }

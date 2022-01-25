@@ -46,11 +46,11 @@ func CreateWithdrawalPostHandler(response http.ResponseWriter, request *http.Req
 	if canwithdraw {
 		repositories.CanWithdrawFromAccount(id, amount)
 		repositories.WithdrawFromAccount(id, amount, description)
-		log.Println("Geld afgeschreven (van, hoeveelheid): ", id, amount)
+		log.Println("Money withdrawn (from, amount): ", id, amount)
 
 		http.Redirect(response, request, "/withdrawal-confirmed", http.StatusFound)
 	} else {
-		log.Println("Kon geen geld afschrijven")
-		data.Errors = append(data.Errors, "Onvoldoende balans")
+		log.Println("Could not withdraw")
+		data.Errors = append(data.Errors, "Insufficient funds")
 	}
 }
