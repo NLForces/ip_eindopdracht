@@ -28,7 +28,7 @@ func main() {
 	if repositories.Connected() {
 		log.Println("Starting database connection")
 	}
-	http.HandleFunc("http://ip-eindopdracht-bram.nl/", redirect)
+	http.HandleFunc("/", redirect)
 
 	http.HandleFunc("/welcome", handlers.ShowWelcomeHandler)
 
