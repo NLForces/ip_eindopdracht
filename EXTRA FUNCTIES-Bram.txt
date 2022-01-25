@@ -17,6 +17,7 @@ EXTRA FUNCTIES TOEGEVOEGD:
     - Required forms bij transfer en withdraw
 
 TODO:
+Account veranderen, max credit/naam
 https fixen <^-- VRAAG AAN DAVID
 Controleren of bruteforcen werkt
 Optimaliseren
