@@ -32,8 +32,10 @@ func main() {
 
 	http.HandleFunc("/welcome", handlers.ShowWelcomeHandler)
 
-	http.HandleFunc("/login", handlers.LoginHandler)
 	http.HandleFunc("/logout", handlers.LogoutHandler)
+
+	http.HandleFunc("/login", handlers.LoginHandler)
+	http.HandleFunc("/create-account", handlers.CreateAccountHandler)
 
 	http.HandleFunc("/saldo", handlers.ShowSaldoHandler)
 	http.HandleFunc("/transactions", handlers.ListTransactionsHandler)

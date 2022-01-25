@@ -1,6 +1,7 @@
 package repositories
 
 import (
+	"main/types"
 	. "main/types"
 )
 
@@ -29,4 +30,9 @@ func PincodeControle(account_id string, ingevoerdePincode string) bool {
 		return true
 	}
 	return false
+}
+
+func CreateAccount(name string, code string, maxcredit float64, pincode string) {
+	account := types.Account{Name: name, Code: code, Maxcredit: maxcredit, Pincode: pincode}
+	connection().Create(&account)
 }

@@ -44,7 +44,7 @@ func CreateTransferPostHandler(response http.ResponseWriter, request *http.Reque
 	var canwithdraw bool = repositories.CanWithdrawFromAccount(id, amount)
 
 	if canwithdraw {
-		repositories.CanWithdrawFromAccount(id, amount)
+		//repositories.CanWithdrawFromAccount(id, amount)
 		repositories.WithdrawFromAccount(id, amount, description)
 		repositories.AddToAccount(target_id, amount, description)
 		log.Println("Geld afgeschreven (van, naar, hoeveelheid, beschrijving): ", id, target_id, amount, description)
