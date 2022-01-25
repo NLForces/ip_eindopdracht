@@ -36,3 +36,20 @@ func CreateAccount(name string, code string, maxcredit float64, pincode string) 
 	account := types.Account{Name: name, Code: code, Maxcredit: maxcredit, Pincode: pincode}
 	connection().Create(&account)
 }
+
+func CanCreateAccount(name string, code string) bool {
+
+	alleAccounts := GetAllAccounts()
+
+	for _, value := range alleAccounts {
+		if value.Name == name {
+			return false
+		}
+		if value.Code == code {
+			return false
+		}
+
+	}
+
+	return true
+}
