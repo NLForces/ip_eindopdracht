@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-//Uitbreiding idee van Menno. In feite CreateTransferHandler gekopiëerd en aangepast
+//Uitbreiding idee van Menno. In feite heb ik CreateTransferHandler gekopiëerd en aangepast
 //Roept createposthandler aan als er iets is ingevuld in de 'create account'
 func CreateAccountHandler(response http.ResponseWriter, request *http.Request) {
 	log.Println("CreateWithdrawalHandler")

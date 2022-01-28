@@ -7,6 +7,7 @@ import (
 	"net/http"
 )
 
+//Gekopieerd van TransferConfirmedHandler. Haalt het laatste ID op en geeft een struct terug met dit ID
 func CreationConfirmedHandler(response http.ResponseWriter, request *http.Request) {
 	log.Println("CreationConfirmed")
 

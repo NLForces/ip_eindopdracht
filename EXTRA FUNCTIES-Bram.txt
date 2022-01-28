@@ -25,7 +25,6 @@ Optimaliseren
 BUGFIXES:
 / redirect niet naar /login
 
-
 Uren eraan gewerkt:
 dinsdag 18   -  8:45 - 16:30 = 7u 45
 woensdag 19  - 11:30 - 16:30 = 5u
