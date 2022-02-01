@@ -43,12 +43,15 @@ func CreateAccountPostHandler(response http.ResponseWriter, request *http.Reques
 
 	var canCreate bool = repositories.CanCreateAccount(name, code)
 
-	if canCreate {
-		repositories.CreateAccount(name, code, maxcredit, pincode)
-		http.Redirect(response, request, "/creation-confirmed", http.StatusFound)
-		log.Println("Account created:", name)
-	} else {
+	if !canCreate {
 		log.Println("Could not create account")
 		data.Errors = append(data.Errors, "Could not create account")
+
+		return
 	}
+
+	repositories.CreateAccount(name, code, maxcredit, pincode)
+	http.Redirect(response, request, "/creation-confirmed", http.StatusFound)
+	log.Println("Account created:", name)
+
 }
