@@ -8,10 +8,6 @@ import (
 	"net/http"
 )
 
-// DISCLAIMER: The login mechanism is NOT representative for a real-world scenario.
-// It is only used to provide a login-like functionality without the complexity that
-// usualy comes with features like this.
-
 func LoginHandler(response http.ResponseWriter, request *http.Request) {
 	log.Println("LoginHandler")
 
@@ -46,6 +42,6 @@ func handlePost(response http.ResponseWriter, request *http.Request, data *struc
 	if pincodeKlopt {
 		http.Redirect(response, request, "/welcome", http.StatusFound)
 	} else {
-		data.Errors = append(data.Errors, "Onjuiste pincode")
+		data.Errors = append(data.Errors, "Wrong pincode")
 	}
 }

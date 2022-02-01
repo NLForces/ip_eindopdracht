@@ -1,10 +1,11 @@
+EXTRA FUNCTIES TOEGEVOEGD:
 - Opdracht 7 af                             (CanWithDrawFromAccount in transactions repository)
 - Afronden op 2 cijfers achter de komma     (transactions.go repository)
 - Optie om met centen te werken             (Withdrawl en transfer htmls)
-- Automatisch uitloggen na 10 minuten       (cookies.go en Helpers.go)
+- Automatisch uitloggen na 3 minuten        (cookies.go en Helpers.go)
 - Pincode functionaliteit                   (handlePost in LoginHandler.go)
 - Back to login button (+ reset cookie)     (logouthandler in handlers)
-
+- Create User functionaliteit               (CreateAccountHandler, CreationConfirmedHandler, Accounts.go en main.go)
 
 - ONLINE HOSTING
     - Automatisch Redirect naar login
@@ -13,15 +14,20 @@
 
 - KLEINE TOEVOEGINGEN
     - Back buttons over de pagina's
+<<<<<<< HEAD
 asdfj;lsadjflksafd
+=======
+    - Required forms bij transfer en withdraw
+>>>>>>> e27aab557e77caef592e947364b365142182c26c
 
 TODO:
+Account veranderen, max credit/naam
 https fixen <^-- VRAAG AAN DAVID
 Controleren of bruteforcen werkt
-camelCaSing fixen
 Optimaliseren
-Encrypt pincode (hash)
-Create user
+
+BUGFIXES:
+/ redirect niet naar /login
 
 Uren eraan gewerkt:
 dinsdag 18   -  8:45 - 16:30 = 7u 45
@@ -30,8 +36,9 @@ donderdag 20 -  8:45 - 16:30 = 7u 45
 vrijdag 21   - 10:40 - 14:00 = 3u 20
 zaterdag 22  - 20:30 - 22:15 = 1u 30m
 maandag 24   - 8:45  - 17:30 = 7u 45
-maandag 24   - 18:45 - 20:45 = 2h 
-                               35h 5m
+maandag 24   - 18:45 - 21:15 = 2h 30
+dinsdag 25   - 14:30 - 18:00 = 3h 30m
+                               37h 5m
 
 
 

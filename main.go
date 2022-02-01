@@ -28,12 +28,16 @@ func main() {
 	if repositories.Connected() {
 		log.Println("Starting database connection")
 	}
-	http.HandleFunc("http://ip-eindopdracht-bram.nl/", redirect)
+	http.HandleFunc("/", redirect)
 
 	http.HandleFunc("/welcome", handlers.ShowWelcomeHandler)
 
-	http.HandleFunc("/login", handlers.LoginHandler)
 	http.HandleFunc("/logout", handlers.LogoutHandler)
+
+	http.HandleFunc("/login", handlers.LoginHandler)
+
+	http.HandleFunc("/create-account", handlers.CreateAccountHandler)
+	http.HandleFunc("/creation-confirmed", handlers.CreationConfirmedHandler)
 
 	http.HandleFunc("/saldo", handlers.ShowSaldoHandler)
 	http.HandleFunc("/transactions", handlers.ListTransactionsHandler)

@@ -4,8 +4,6 @@
         
         <h1>Transfer</h1>
 
-         <br>
-
         {{ if .Errors }}
             <p>Errors:</p>
             <ul>
@@ -18,12 +16,12 @@
         <form action="/transfer" method="POST">
 
             <label for="target_account_id">For (account id):</label><br>
-            <input type="number" name="target_account_id" min="1" max="5"><br>
+            <input type="number" name="target_account_id" min="1" required><br>
 
             <br>
 
             <label for="amount">Amount:</label><br>
-            <input type="number" name="amount" min="1" max="100" step="0.1"><br>
+            <input type="number" name="amount" min="1" max="10000" step="0.1" required><br>
             
             <br>
 
@@ -35,11 +33,11 @@
             <input type="submit" value="Transfer">
 
         </form>
-        <br>
+
         <a href="http://ip-eindopdracht-bram.nl/welcome">
-            <button>Terug</button>
+            <button>Back</button>
          </a>
-         <br>
+
     </body>
 
 </html>
